@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: hsl(75, 94%, 57%);
+  --color-brand-white: hsl(0, 0%, 100%);
+
+  --color-dark-700: hsl(0, 0%, 20%);
+  --color-dark-800: hsl(0, 0%, 12%);
+  --color-dark-900: hsl(0, 0%, 8%);
+
+  --font-inter: "Inter", sans-serif;
+}
