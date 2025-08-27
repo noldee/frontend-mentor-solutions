@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Preview Card Component</title>
+
+  <link href="/src/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-main-bg h-screen flex justify-center items-center">
+  <main class="max-w-full w-72 bg-card-bg p-5 rounded-xl">
+    <header>
+      <div class="relative">
+        <img class="max-w-full h-auto rounded-xl" src="./images/image-equilibrium.jpg" alt="image-equilibrium">
+        <div
+          class="absolute top-1/2 left-1/2 rounded-xl transition-all transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 hover:bg-primary-cyan/50">
+          <img src="public/images/icon-view.svg" alt="icon-view">
+        </div>
+      </div>
+      <h1 class="text-neu-white mt-4 font-bold text-2xl hover:text-primary-cyan transition-colors">Equilibrium #3429
+      </h1>
+      <p class="text-primary-blue font-semibold text-sm my-4">Our Equilibrium collection promotes balance and calm.</p>
+      <section class="flex items-center justify-between my-4">
+        <article class="flex items-center space-x-2">
+          <img src="./images/icon-ethereum.svg" alt="icon-ethereum">
+          <span class="text-primary-cyan font-semibold text-sm">
+            0.041 ETH</span>
+        </article>
+        <article class="flex items-center space-x-2">
+          <img src="./images/icon-clock.svg" alt="icon-clock">
+          <span class="text-primary-blue font-semibold text-sm">3 days left</span>
+        </article>
+      </section>
+    </header>
+    <hr class="text-line my-3">
+    <footer class="flex space-x-3 items-center">
+      <img src="./images/image-avatar.png" class="h-9 w-9 rounded-full max-w-full border border-neu-white"
+        alt="image-avatar">
+      <div>
+        <h2 class="text-primary-blue font-normal">Creation of <span
+            class="text-neu-white hover:text-primary-cyan transition-colors">Jules Wyvern</span></h2>
+      </div>
+    </footer>
+  </main>
+
+</body>
+
+</html>

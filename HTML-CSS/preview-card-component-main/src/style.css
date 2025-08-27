@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: hsl(215, 51%, 70%);
+  --color-primary-cyan: hsl(178, 100%, 50%);
+  --color-main-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-line: hsl(215, 32%, 27%);
+  --color-neu-white: hsl(0, 0%, 100%);
+}
