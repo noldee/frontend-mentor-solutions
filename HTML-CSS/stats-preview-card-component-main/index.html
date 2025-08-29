@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+  <title>Stats Preview Card Component</title>
+
+  <meta name="description"
+    content="3 Column Preview Card Component built with HTML, TailwindCSS. Responsive and modern design." />
+  <meta name="author" content="Walter Soca" />
+  <meta name="keywords" content="frontendmentor, tailwind, responsive, card component, UI design" />
+
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:title" content="3 Column Preview Card" />
+  <meta property="og:description" content="Frontend Mentor challenge: 3 Column Preview Card built with TailwindCSS." />
+  <meta property="og:image" content="./images/image-header-mobile.jpg" />
+  <meta property="og:url" content="https://stats-card-component-mainu.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<bodyc class="bg-mainbg-navy min-h-screen flex justify-center flex-col mx-auto p-4 items-center">
+  <main
+    class="max-w-full w-[1000px] bg-cardbg-blue text-center md:text-left rounded-[6px] overflow-hidden grid grid-cols-1 md:grid-cols-2">
+    <section class="relative">
+      <img src="./images/image-header-mobile.jpg" class="w-full h-full overscroll-auto"
+        alt="image-header-mobile" />
+      <div class="absolute bg-accent-purple/65 inset-0">
+      <div class="absolute bg-black/25 inset-0">
+      </div>
+    </section>
+    <section class="p-6 sm:p-4 md:p-7 xl:p-14 md:row-end-1">
+      <article>
+        <h1 class="text-2xl xl:text-4xl font-inter-700  text-main-paragraph">Get <span
+            class="text-accent-purple">insights</span> that
+          help
+          your business grow.</h1>
+        <p class="text-main-paragraph md:font-normal font-inter-400  xl:font-semibold mt-5 mb-8 md:mt-7">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+      </article>
+
+      <article class="flex flex-col md:flex-row space-y-4 md:space-x-10 md:space-y-0 md:mt-16">
+        <div>
+          <h1 class="font-bold text-xl text-mainheading-stats">
+            10k+
+            <span class="block text-sm font-normal text-main-paragraph uppercase "> companies </span>
+          </h1>
+        </div>
+        <div>
+          <h1 class="font-bold text-xl text-mainheading-stats">
+            314
+            <span class="block text-sm font-normal text-main-paragraph uppercase"> templates </span>
+          </h1>
+        </div>
+        <div>
+          <h1 class="font-bold text-xl text-mainheading-stats uppercase">12m+ <span
+              class="block text-sm font-normal text-main-paragraph uppercase"> queries</span></h1>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="attribution text-main-paragraph text-center mt-10">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="https://github.com/noldee" class="text-green-800 font-bold">
+      Nolde</a>.
+  </div>
+</bodyc>
+
+</html>
