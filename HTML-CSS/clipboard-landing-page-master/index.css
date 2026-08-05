@@ -1,0 +1,345 @@
+:root {
+  --strong-cyan: hsl(171, 66%, 44%);
+  --strong-cyan-hover: hsl(171, 66%, 38%);
+  --light-blue: hsl(233, 100%, 69%);
+  --light-blue-hover: hsl(233, 100%, 63%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+  --light-bg: hsl(220, 18%, 97%);
+
+  --font-family: "Bai Jamjuree", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--grayish-blue);
+  background-color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-grayish-blue);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--strong-cyan);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: var(--strong-cyan-hover);
+}
+
+.btn-secondary {
+  background-color: var(--light-blue);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary:hover {
+  background-color: var(--light-blue-hover);
+}
+
+.hero {
+  background: url("./images/bg-header-mobile.png") no-repeat top center;
+  background-size: contain;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.hero-logo {
+  margin: 0 auto 40px auto;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.features-intro {
+  padding: 60px 0;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.feature-image {
+  width: 100%;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.access-section {
+  padding: 60px 0;
+}
+
+.access-image img {
+  margin: 0 auto;
+}
+
+.workflow-section {
+  padding: 60px 0;
+}
+
+.tools-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+.tool-card {
+  padding: 0 10px;
+}
+
+.tool-icon {
+  height: 40px;
+  margin: 0 auto 24px auto;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+}
+
+.logos-section {
+  padding: 80px 0;
+}
+
+.logos-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.cta-section {
+  padding: 60px 0 100px 0;
+}
+
+.footer {
+  background-color: var(--light-bg);
+  padding: 50px 0 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo {
+  width: 55px;
+  height: 55px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--strong-cyan);
+}
+
+.social-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: var(--dark-grayish-blue);
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--strong-cyan);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 40px auto 0;
+  font-size: 0.75rem;
+  color: var(--grayish-blue);
+}
+
+.attribution a {
+  color: var(--strong-cyan);
+}
+
+@media (min-width: 768px) {
+  body {
+    text-align: left;
+  }
+
+  .hero {
+    background: url("./images/bg-header-desktop.png") no-repeat top center;
+    background-size: contain;
+    padding-top: 130px;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .hero,
+  .features-intro,
+  .access-section,
+  .workflow-section,
+  .cta-section {
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .features-grid {
+    flex-direction: row;
+    align-items: center;
+    margin-left: -120px;
+    gap: 80px;
+    text-align: left;
+  }
+
+  .feature-image {
+    flex: 1.2;
+  }
+
+  .feature-list {
+    flex: 1;
+    gap: 48px;
+  }
+
+  .feature-item p {
+    margin: 0;
+  }
+
+  .tools-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tool-card {
+    flex: 1;
+  }
+
+  .logos-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 40px;
+    text-align: left;
+  }
+}
