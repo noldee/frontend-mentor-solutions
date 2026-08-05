@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <header class="card-header">
+        <img src="images/bg-pattern-card.svg" alt="" class="card-banner" />
+      </header>
+
+      <section class="card-body">
+        <div class="avatar-container">
+          <img
+            src="images/image-victor.jpg"
+            alt="Victor Crest"
+            class="card-avatar"
+          />
+        </div>
+
+        <h1 class="primary-navy-950 kumbh-sans-700">
+          Victor Crest <span class="primary-gray-500 kumbh-sans-400">26</span>
+        </h1>
+        <p class="primary-gray-500 kumbh-sans-400 location">London</p>
+
+        <div class="card-stats">
+          <div class="stat-item">
+            <span class="stat-number primary-navy-950 kumbh-sans-700">80K</span>
+            <span class="stat-label primary-gray-500 kumbh-sans-400"
+              >Followers</span
+            >
+          </div>
+          <div class="stat-item">
+            <span class="stat-number primary-navy-950 kumbh-sans-700"
+              >803K</span
+            >
+            <span class="stat-label primary-gray-500 kumbh-sans-400"
+              >Likes</span
+            >
+          </div>
+          <div class="stat-item">
+            <span class="stat-number primary-navy-950 kumbh-sans-700"
+              >1.4K</span
+            >
+            <span class="stat-label primary-gray-500 kumbh-sans-400"
+              >Photos</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://github.com/noldee/frontend-mentor-solutions">Vex</a>.
+    </footer>
+  </body>
+</html>
