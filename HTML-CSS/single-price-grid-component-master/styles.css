@@ -1,0 +1,198 @@
+:root {
+  /* Colors from Style Guide */
+  --clr-teal-500: hsl(179, 62%, 43%);
+  --clr-teal-400: hsl(179, 47%, 52%);
+  --clr-green-400: hsl(71, 73%, 54%);
+  --clr-teal-100: hsl(204, 43%, 93%);
+  --clr-gray-500: hsl(218, 22%, 67%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-main: "Karla", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: 16px;
+  background-color: var(--clr-teal-100);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2rem 1.5rem;
+  line-height: 1.6;
+}
+
+.price-card {
+  background-color: var(--clr-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 635px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-hero {
+  padding: 2.5rem 1.5rem;
+}
+
+.card-hero h1 {
+  color: var(--clr-teal-500);
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.25rem;
+}
+
+.card-hero .subtitle {
+  color: var(--clr-green-400);
+  font-weight: var(--fw-bold);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card-hero .description {
+  color: var(--clr-gray-500);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.card-subscription {
+  background-color: var(--clr-teal-500);
+  color: var(--clr-white);
+  padding: 2.5rem 1.5rem;
+}
+
+.card-subscription h2 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.125rem;
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.period {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.access-note {
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-signup {
+  display: block;
+  text-align: center;
+  background-color: var(--clr-green-400);
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  padding: 0.875rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-signup:hover,
+.btn-signup:focus-visible {
+  background-color: hsl(71, 73%, 45%);
+  outline: none;
+}
+
+.card-why-us {
+  background-color: var(--clr-teal-400);
+  color: var(--clr-white);
+  padding: 2.5rem 1.5rem;
+}
+
+.card-why-us h2 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.125rem;
+}
+
+.card-why-us ul {
+  list-style: none;
+}
+
+.card-why-us li {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--clr-gray-500);
+}
+
+.attribution a {
+  color: var(--clr-teal-500);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 650px) {
+  body {
+    padding: 0;
+  }
+
+  .price-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-hero {
+    grid-column: 1 / -1;
+    padding: 2.5rem;
+  }
+
+  .card-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-hero .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .card-hero .description {
+    font-size: 0.98rem;
+  }
+
+  .card-subscription,
+  .card-why-us {
+    padding: 2.5rem;
+  }
+}
