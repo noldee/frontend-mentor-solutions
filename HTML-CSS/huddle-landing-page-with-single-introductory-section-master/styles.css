@@ -1,0 +1,237 @@
+:root {
+  /* Colors */
+  --clr-purple-700: hsl(257, 40%, 49%);
+  --clr-magenta-400: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  /* Transitions & Shadows */
+  --transition-fast: all 0.3s ease;
+  --box-shadow-btn: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  color: var(--clr-white);
+  background-color: var(--clr-purple-700);
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 2.25rem 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 3.5rem;
+}
+
+.logo {
+  width: 120px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.75rem;
+  text-align: center;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 520px;
+}
+
+.hero-content h1 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-size: 0.9375rem;
+  opacity: 0.9;
+}
+
+.btn-register {
+  display: inline-block;
+  background-color: var(--clr-white);
+  color: var(--clr-purple-700);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  padding: 0.75rem 5rem;
+  border-radius: 50px;
+  box-shadow: var(--box-shadow-btn);
+  margin-top: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.btn-register:hover,
+.btn-register:focus-visible {
+  background-color: var(--clr-magenta-400);
+  color: var(--clr-white);
+  outline: none;
+}
+
+.footer {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  transition: var(--transition-fast);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--clr-magenta-400);
+  border-color: var(--clr-magenta-400);
+  outline: none;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.attribution a {
+  color: var(--clr-magenta-400);
+  font-weight: var(--fw-semi-bold);
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .page-wrapper {
+    padding: 4rem 5rem 2.5rem;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+  }
+
+  .hero-image-container {
+    flex: 1.3;
+  }
+
+  .hero-content {
+    flex: 1;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 1.125rem;
+  }
+
+  .btn-register {
+    font-size: 1.125rem;
+    padding: 0.9rem 4rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
