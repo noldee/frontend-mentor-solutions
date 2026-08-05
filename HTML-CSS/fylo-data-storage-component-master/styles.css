@@ -1,0 +1,231 @@
+:root {
+  --clr-gradient-start: hsl(6, 100%, 80%);
+  --clr-gradient-end: hsl(335, 100%, 65%);
+  --clr-blue-200: hsl(243, 100%, 93%);
+  --clr-gray-blue: hsl(229, 7%, 55%);
+  --clr-blue-850: hsl(228, 56%, 26%);
+  --clr-blue-950: hsl(229, 57%, 11%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-main: "Raleway", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: 14px;
+  background-color: var(--clr-blue-950);
+  background-image: url("./images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  color: var(--clr-blue-200);
+}
+
+.fylo-container {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--clr-blue-850);
+  padding: 2.5rem;
+  border-radius: 10px;
+}
+
+.fylo-brand {
+  border-top-right-radius: 100px;
+  padding-right: 6rem;
+}
+
+.brand-logo {
+  margin-bottom: 2rem;
+}
+
+.brand-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-btn {
+  background-color: var(--clr-blue-950);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.fylo-storage {
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+
+.storage-info {
+  text-align: center;
+  color: var(--clr-blue-200);
+  margin-bottom: 1rem;
+}
+
+.storage-info span {
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.progress-bar-container {
+  background-color: rgba(12, 14, 26, 0.5);
+  height: 20px;
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    var(--clr-gradient-start),
+    var(--clr-gradient-end)
+  );
+  height: 100%;
+  width: 81.5%;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2px;
+}
+
+.progress-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+}
+
+.storage-limits {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--clr-blue-200);
+}
+
+.storage-left {
+  background-color: var(--clr-white);
+  color: var(--clr-blue-950);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.storage-left .amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.storage-left .unit {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--clr-gray-blue);
+  letter-spacing: 1px;
+}
+
+.attribution {
+  margin-top: 4rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--clr-blue-200);
+}
+
+.attribution a {
+  color: var(--clr-gradient-start);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-position: bottom;
+    background-size: 100% 50%;
+  }
+
+  .fylo-container {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .fylo-brand {
+    flex: 0 0 350px;
+  }
+
+  .fylo-storage {
+    flex: 1;
+    padding-bottom: 2.5rem;
+  }
+
+  .storage-info {
+    text-align: left;
+  }
+
+  .storage-left {
+    top: -45px;
+    bottom: auto;
+    left: auto;
+    right: 2.5rem;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+
+  .storage-left::after {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 22px 22px 0;
+    border-color: transparent var(--clr-white) transparent transparent;
+  }
+}

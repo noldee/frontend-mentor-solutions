@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <meta
+      name="description"
+      content="Fylo data storage component challenge solved with HTML5 and CSS3 flexbox/grid layout."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="fylo-container">
+      <section class="card fylo-brand">
+        <img src="./images/logo.svg" alt="Fylo logo" class="brand-logo" />
+        <div class="brand-actions">
+          <button class="action-btn" aria-label="Document">
+            <img src="./images/icon-document.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="action-btn" aria-label="Folder">
+            <img src="./images/icon-folder.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="action-btn" aria-label="Upload">
+            <img src="./images/icon-upload.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </section>
+
+      <section class="card fylo-storage">
+        <p class="storage-info">
+          You’ve used <span>815 GB</span> of your storage
+        </p>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar">
+            <span class="progress-dot"></span>
+          </div>
+        </div>
+
+        <div class="storage-limits">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
+
+        <div class="storage-left">
+          <span class="amount">185</span>
+          <span class="unit">GB LEFT</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/noldee"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Vex</a
+      >.
+    </footer>
+  </body>
+</html>
