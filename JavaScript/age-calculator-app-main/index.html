@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <form id="ageForm" class="form" novalidate>
+        <div class="input-group">
+          <div class="input-wrapper" id="dayWrapper">
+            <label for="day" class="input-label">DAY</label>
+            <input
+              type="number"
+              id="day"
+              class="input-field"
+              placeholder="DD"
+              min="1"
+              max="31"
+              autocomplete="off"
+            />
+            <span class="error-message" id="dayError"></span>
+          </div>
+          <div class="input-wrapper" id="monthWrapper">
+            <label for="month" class="input-label">MONTH</label>
+            <input
+              type="number"
+              id="month"
+              class="input-field"
+              placeholder="MM"
+              min="1"
+              max="12"
+              autocomplete="off"
+            />
+            <span class="error-message" id="monthError"></span>
+          </div>
+          <div class="input-wrapper" id="yearWrapper">
+            <label for="year" class="input-label">YEAR</label>
+            <input
+              type="number"
+              id="year"
+              class="input-field"
+              placeholder="YYYY"
+              min="1"
+              max="9999"
+              autocomplete="off"
+            />
+            <span class="error-message" id="yearError"></span>
+          </div>
+        </div>
+
+        <div class="divider">
+          <hr class="divider-line" />
+          <button type="submit" class="submit-btn" aria-label="Calculate age">
+            <img
+              src="./assets/images/icon-arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      </form>
+
+      <div class="results">
+        <div class="result-line">
+          <span class="result-number" id="resultYears">--</span>
+          <span class="result-label">years</span>
+        </div>
+        <div class="result-line">
+          <span class="result-number" id="resultMonths">--</span>
+          <span class="result-label">months</span>
+        </div>
+        <div class="result-line">
+          <span class="result-number" id="resultDays">--</span>
+          <span class="result-label">days</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/noldee">Noldee</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
