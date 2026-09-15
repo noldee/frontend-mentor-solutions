@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link
+      rel="preload"
+      href="./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-patterns" aria-hidden="true">
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt=""
+        class="pattern pattern--circle"
+      />
+      <img
+        src="./assets/images/pattern-lines.svg"
+        alt=""
+        class="pattern pattern--lines"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt=""
+        class="pattern pattern--squiggly-top"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+        alt=""
+        class="pattern pattern--squiggly-bottom-mobile"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        alt=""
+        class="pattern pattern--squiggly-bottom-desktop"
+      />
+    </div>
+
+    <main class="main">
+      <section class="form-section" aria-labelledby="form-heading">
+        <header class="form-header">
+          <img
+            src="./assets/images/logo-full.svg"
+            alt="Coding Conf"
+            class="logo"
+          />
+          <h1 id="form-heading" class="form-title">
+            Your Journey to Coding Conf 2025 Starts Here!
+          </h1>
+          <p class="form-subtitle">
+            Secure your spot at next year's biggest coding conference.
+          </p>
+        </header>
+
+        <form id="ticket-form" class="form" novalidate>
+          <div class="form-group avatar-group">
+            <label for="avatar" class="form-label">Upload Avatar</label>
+            <div
+              class="avatar-upload"
+              id="avatar-upload"
+              role="button"
+              tabindex="0"
+              aria-label="Upload avatar, drag and drop or click to select file"
+            >
+              <img
+                src="./assets/images/icon-upload.svg"
+                alt=""
+                class="avatar-upload__icon"
+                aria-hidden="true"
+              />
+              <p class="avatar-upload__text" id="avatar-upload-text">
+                Drag and drop or click to upload
+              </p>
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/jpeg,image/png"
+                class="avatar-input"
+                aria-describedby="avatar-hint avatar-error"
+                hidden
+              />
+              <img
+                id="avatar-preview"
+                class="avatar-preview"
+                alt="Avatar preview"
+                hidden
+              />
+            </div>
+            <p id="avatar-hint" class="form-hint">
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+            <p
+              id="avatar-error"
+              class="form-error"
+              aria-live="polite"
+              hidden
+            ></p>
+          </div>
+
+          <div class="form-group">
+            <label for="fullname" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              class="form-input"
+              placeholder=""
+              aria-describedby="fullname-error"
+              autocomplete="name"
+              required
+            />
+            <p
+              id="fullname-error"
+              class="form-error"
+              aria-live="polite"
+              hidden
+            ></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="example@email.com"
+              aria-describedby="email-error"
+              autocomplete="email"
+              required
+            />
+            <p
+              id="email-error"
+              class="form-error"
+              aria-live="polite"
+              hidden
+            ></p>
+          </div>
+
+          <div class="form-group">
+            <label for="github" class="form-label">GitHub Username</label>
+            <div class="github-input-wrapper">
+              <span class="github-prefix" aria-hidden="true">@</span>
+              <input
+                type="text"
+                id="github"
+                name="github"
+                class="form-input github-input"
+                placeholder="yourusername"
+                aria-describedby="github-error"
+                required
+              />
+            </div>
+            <p
+              id="github-error"
+              class="form-error"
+              aria-live="polite"
+              hidden
+            ></p>
+          </div>
+
+          <button type="submit" class="btn btn--submit" id="submit-btn">
+            Generate My Ticket
+          </button>
+        </form>
+      </section>
+
+      <section
+        class="ticket-section"
+        id="ticket-section"
+        aria-labelledby="ticket-heading"
+        hidden
+      >
+        <div class="ticket-header-text">
+          <h2 id="ticket-heading" class="ticket-title">
+            Congrats, <span class="highlight" id="ticket-name"></span>! Your
+            ticket is ready.
+          </h2>
+          <p class="ticket-subtitle">
+            We've emailed your ticket to
+            <span class="email" id="ticket-email"></span> and will send updates
+            in the run up to the event.
+          </p>
+        </div>
+
+        <div class="ticket" id="ticket">
+          <div class="ticket-inner">
+            <div class="ticket-content">
+              <div class="ticket-event-info">
+                <img
+                  src="./assets/images/logo-mark.svg"
+                  alt=""
+                  class="ticket-logo"
+                  aria-hidden="true"
+                />
+                <div>
+                  <div class="ticket-event-name">Coding Conf</div>
+                  <div class="ticket-date">Jan 31, 2025 / Austin, TX</div>
+                </div>
+              </div>
+              <div class="ticket-attendee">
+                <div class="ticket-avatar-wrapper">
+                  <img id="ticket-avatar" src="" alt="" class="ticket-avatar" />
+                </div>
+                <div class="ticket-attendee-info">
+                  <span
+                    class="ticket-attendee-name"
+                    id="ticket-fullname"
+                  ></span>
+                  <span class="ticket-attendee-github">
+                    <img
+                      src="./assets/images/icon-github.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <span id="ticket-github"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-divider" aria-hidden="true"></div>
+            <div class="ticket-number" aria-hidden="true">#01609</div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--new-ticket" id="new-ticket-btn">
+          Generate New Ticket
+        </button>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/noldee">Nolde</a>.
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
